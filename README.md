@@ -21,13 +21,17 @@ Want to learn about OpenFeature interactively in the browser? If so, check out o
 
 [![Click here](https://img.shields.io/badge/Click%20here-Interactive%20Tutorial-green)](https://killercoda.com/open-feature/scenario/five-minutes-to-feature-flags)
 
-> Note: Requires a free Killercoda account
+> **Note**
+> Requires a free Killercoda account
 
 ### 📚 Written Tutorial
 
 Prefer to work on your own computer? We have your covered! Head over to the Five MInutes to Feature Flags tutorial on the OpenFeature docs.
 
-[![Click here](https://img.shields.io/badge/Click%20here-Written%20Tutorial-green)](https://docs.openfeature.dev/docs/tutorials/five-minutes-to-feature-flags)
+<!-- [![Click here](https://img.shields.io/badge/Click%20here-Written%20Tutorial-green)](https://docs.openfeature.dev/docs/tutorials/five-minutes-to-feature-flags) -->
+
+> **Warning**
+> Coming soon
 
 ## 🙌 Acknowledgment
 
