@@ -3,7 +3,10 @@ import Router from "express-promise-router";
 
 const app = express();
 const routes = Router();
-app.use(routes);
+app.use((_, res, next) => {
+  res.setHeader("content-type", "text/plain");
+  next();
+}, routes);
 
 routes.get("/", async (_, res) => {
   res.send("Hello, world!");

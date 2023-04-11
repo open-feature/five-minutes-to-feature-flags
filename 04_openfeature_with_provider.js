@@ -5,13 +5,11 @@ import { OpenFeature } from "@openfeature/js-sdk";
 import { InMemoryProvider } from "@openfeature/in-memory-provider";
 
 const app = express();
-app.use(function (_, res, next) {
+const routes = Router();
+app.use((_, res, next) => {
   res.setHeader("content-type", "text/plain");
   next();
-});
-
-const routes = Router();
-app.use(routes);
+}, routes);
 
 const featureFlags = OpenFeature.getClient();
 

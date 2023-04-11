@@ -3,19 +3,16 @@ import Router from "express-promise-router";
 import cowsay from "cowsay";
 
 const app = express();
-
-app.use(function (_, res, next) {
+const routes = Router();
+app.use((_, res, next) => {
   res.setHeader("content-type", "text/plain");
   next();
-});
-
-const routes = Router();
-app.use(routes);
+}, routes);
 
 routes.get("/", async (_, res) => {
   // set this to true to test our new
   // cow-based greeting system
-  const withCow = false;
+  const withCow = true;
   if (withCow) {
     res.send(cowsay.say({ text: "Hello, world!" }));
   } else {
