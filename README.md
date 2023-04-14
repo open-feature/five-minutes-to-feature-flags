@@ -26,12 +26,9 @@ Want to learn about OpenFeature interactively in the browser? If so, check out o
 
 ### 📚 Written Tutorial
 
-Prefer to work on your own computer? We have your covered! Head over to the Five MInutes to Feature Flags tutorial on the OpenFeature docs.
+Prefer to work on your own computer? We have your covered! Head over to the Five Minutes to Feature Flags tutorial on the OpenFeature docs.
 
-<!-- [![Click here](https://img.shields.io/badge/Click%20here-Written%20Tutorial-green)](https://docs.openfeature.dev/docs/tutorials/five-minutes-to-feature-flags) -->
-
-> **Warning**
-> Coming soon
+[![Click here](https://img.shields.io/badge/Click%20here-Written%20Tutorial-green)](https://openfeature.dev/docs/tutorials/five-minutes-to-feature-flags)
 
 ## 🙌 Acknowledgment
 
