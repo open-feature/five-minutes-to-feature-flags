@@ -19,7 +19,13 @@ const FLAG_CONFIGURATION = {
       off: false
     },
     disabled: false,
-    defaultVariant: "on"
+    defaultVariant: "off",
+    contextEvaluator: (context) => {
+      if (context.cow === "Bessie") {
+        return "on";
+      }
+      return "off";
+    },
   }
 };
 
@@ -27,8 +33,11 @@ const featureFlagProvider = new InMemoryProvider(FLAG_CONFIGURATION);
 
 OpenFeature.setProvider(featureFlagProvider);
 
-routes.get("/", async (_, res) => {
-  const withCows = await featureFlags.getBooleanValue("with-cows", false);
+routes.get("/", async (req, res) => {
+  const context = {
+    cow: req.get("x-cow")
+  };
+  const withCows = await featureFlags.getBooleanValue("with-cows", false, context);
   if (withCows) {
     res.send(cowsay.say({ text: "Hello, world!" }));
   } else {
