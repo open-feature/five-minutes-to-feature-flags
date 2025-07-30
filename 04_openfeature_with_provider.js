@@ -28,8 +28,8 @@ const featureFlagProvider = new InMemoryProvider(FLAG_CONFIGURATION);
 OpenFeature.setProvider(featureFlagProvider);
 
 routes.get("/", async (_, res) => {
-  const withCows = await featureFlags.getBooleanValue("with-cows", false);
-  if (withCows) {
+  const withCow = await featureFlags.getBooleanValue("with-cows", false);
+  if (withCow) {
     res.send(cowsay.say({ text: "Hello, world!" }));
   } else {
     res.send("Hello, world!");
