@@ -13,8 +13,8 @@ app.use((_, res, next) => {
 const featureFlags = OpenFeature.getClient();
 
 routes.get("/", async (_, res) => {
-  const withCows = await featureFlags.getBooleanValue("with-cows", false);
-  if (withCows) {
+  const withCow = await featureFlags.getBooleanValue("with-cows", false);
+  if (withCow) {
     res.send(cowsay.say({ text: "Hello, world!" }));
   } else {
     res.send("Hello, world!");
