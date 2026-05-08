@@ -1,8 +1,7 @@
 import express from "express";
-import Router from "express-promise-router";
 
 const app = express();
-const routes = Router();
+const routes = express.Router();
 app.use((_, res, next) => {
   res.setHeader("content-type", "text/plain");
   next();
